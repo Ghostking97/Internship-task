@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/style.css">
+  <title>MY TECH GOALS | HNG STAGE 1</title>
+</head>
+
+<body>
+  <header>
+    <div class="hero">
+      <div class="content">
+        <h1>MY TECH GOALS FOR THE NEXT 2 YEARS</h1>
+      </div>
+    </div>
+  </header>
+
+  <article class="flex-columns">
+    <div class="row">
+      <div class="column">
+        <div class="column-1">
+          <img src="IMAGES/master frontend.jpg" alt="">
+        </div>
+      </div>
+      <div class="column">
+        <div class="column-2 bg-dark">
+          <h2>GOAL ONE - MASTER FRONTEND DEVELOPMENT</h2>
+          <ul>
+            <li>Master CSS and JavaScript</li>
+            <li>Learn and master react</li>
+            <li>Build projects using different programming languages</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="flex-columns">
+    <div class="row">
+      <div class="column">
+        <div class="column-1">
+          <img src="IMAGES/open source.jpg" alt="">
+        </div>
+      </div>
+      <div class="column">
+        <div class="column-2">
+          <h2>GOAL TWO - CONTRIBUTE TO OPEN SOURCE PROJECTS</h2>
+          <ul>
+            <li>Source and contribute to projects on Github</li>
+            <li>Attend coding community events</li>
+            <li>Start an open source project with my friends</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="flex-columns">
+    <div class="row">
+      <div class="column">
+        <div class="column-1">
+          <img src="IMAGES/ui_ux.jpg" alt="">
+        </div>
+      </div>
+      <div class="column">
+        <div class="column-2 bg-dark">
+          <h2>GOAL THREE - LEARN UI/UX</h2>
+          <ul>
+            <li>Continue learning Ui/Ux</li>
+            <li>Master design skills</li>
+            <li>Learn to integrate my UI designs into code</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="flex-columns">
+    <div class="row">
+      <div class="column">
+        <div class="column-1">
+          <img src="IMAGES/pexels-divinetechygirl-1181263.jpg" alt="">
+        </div>
+      </div>
+      <div class="column">
+        <div class="column-2">
+          <h2>GOAL FOUR - GAIN EXPERIENCE IN WEB DEVELOPMENT</h2>
+          <ul>
+            <li>Leran frameworks like React and Vue.js</li>
+            <li>Develop and deploy full stack web applications</li>
+            <li>Learn and understand back-end technologies like Node.js and Django</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="flex-columns">
+    <div class="row">
+      <div class="column">
+        <div class="column-1">
+          <img src="IMAGES/friends.jpg" alt="">
+        </div>
+      </div>
+      <div class="column">
+        <div class="column-2 bg-dark">
+          <h2>GOAL FIVE - STAY INTOUCH WITH TECH FRIENDS</h2>
+          <ul>
+            <li>Read tech blogs and books frequently</li>
+            <li>Explore life outside tech</li>
+            <li>Attend webiners and tech conferences</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <div class="data-testid">
+    <p data-testid="current-date-time"></p>
+    <p data-testid="user-name"></p>
+    <p data-testid="day-of-week"></p>
+    <p data-testid="user-email"></p>
+    <img data-testid="profile-picture" src="" alt="profile-picture">
+  </div>
+
+  <br>
+  <div>
+    <a href="http://hng.tech/learn" class="btn-1" data-testid="hngLink">Visit HNG</a>
+    <a href="http://keyword.dog/" class="btn-2" data-testid="keywordLink">Keyword Link</a>
+    <a href="http://scrapeanyweb.site/" class="btn-3" data-testid="scrapeanywebLink">Scrape Any Web Link</a>
+  </div>
+
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const formattedDateTime = now.toLocaleString();
+      const dayOfWeek = now.toDateString(undefined, { weekday: 'long' });
+
+      document.querySelector('[data-testid="current-date-time"]').textContent = formattedDateTime;
+      document.querySelector('[data-testid="day-of-week"]').textContent = dayOfWeek;
+    }
+
+    function setUserName(name) {
+      document.querySelector('[data-testid="user-name"]').textContent = name;
+    }
+
+    function setUserEmail(email) {
+      document.querySelector('[data-testid="user-email"]').textContent = email;
+    }
+
+    function setProfilePicture(url) {
+      document.querySelector('[data-testid="profile-picture"]').src = url;
+    }
+
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+
+    setUserName("Emmanuel Uzoigwe");
+    setUserEmail("classicjames1997@gmail.com");
+    setProfilePicture("https://ca.slack-edge.com/T07466B189M-U079XTT2HGX-7a0e0ca1c72f-512")
+  </script>
+</body>
+
+</html>
